@@ -1,279 +1,336 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhammad Hariz Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Additional CSS for Projects and Skills sections */
+    #projects {
+      padding: 80px 0;
+      background-color: #f9f9f9;
+    }
+    
+    .project-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .project-content {
+      padding: 30px;
+    }
+    
+    .project-content h3 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    
+    .tech-stack {
+      margin: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .tech-stack span {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    
+    .project-link {
+      display: inline-block;
+      background: #3b82f6;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 15px;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+    
+    .project-link:hover {
+      background: #2563eb;
+    }
+    
+    #skills {
+      padding: 80px 0;
+    }
+    
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 30px;
+    }
+    
+    .skill-category {
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    .skill-category h3 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+    }
+    
+    .skill-category ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .skill-category li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      color: #4b5563;
+      font-size: 1.05rem;
+    }
+    
+    .heading {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2.2rem;
+      color: #2c3e50;
+      position: relative;
+    }
+    
+    .heading:after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #3b82f6;
+      margin: 15px auto 0;
+    }
+  </style>
 </head>
-
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
+  <header>
+    <ul id="menu" class="shadow">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <div id="lead">
+    <div id="lead-content">
+      <h1>Muhammad Hariz bin Abdullah</h1>
+      <h2>IT Student | Aspiring Full-Stack Developer</h2>
+      <a href="assets/images/Muhammad_Hariz_Resume1.pdf" class="btn-rounded-white">Download Resume</a>
     </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
+    <div id="lead-overlay"></div>
+    <div id="lead-down"><span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div>
+  </div>
 
-    <div id="lead">
-        <div id="lead-content">
-            <h1>Ryan Fitzgerald</h1>
-            <h2>Software Engineer</h2>
-            <a href="#" class="btn-rounded-white">Download Resume</a>
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"><h2 class="heading">About Me</h2></div>
+        <div class="col-md-8">
+          <p>
+            An enthusiastic and adaptable IT student passionate about problem-solving and software development.
+            Motivated to contribute meaningfully to real-world tech solutions through both team-based and individual projects.
+          </p>
         </div>
-        <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
+      </div>
     </div>
-    <!-- End #lead -->
+  </div>
 
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec
-                        eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus
-                        ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
-                    </p>
-                </div>
-            </div>
+  <div id="experience" class="background-alt">
+    <div class="container">
+      <h2 class="heading">Experience</h2>
+      <div id="experience-timeline">
+        <div data-date="2021 – 2022">
+          <h3>McDonald's Singapore</h3>
+          <h4>Part-time Service Crew</h4>
+          <p>
+            Delivered customer service in a fast-paced environment. Managed POS systems, ensured hygiene standards, and collaborated with diverse teams. Built strong communication and time-management skills.
+          </p>
         </div>
+      </div>
     </div>
-    <!-- End #about -->
+  </div>
 
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
-            </div>
-
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
-            </div>
-
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
-            </div>
-        </div>
+  <div id="education">
+    <div class="container">
+      <h2 class="heading">Education</h2>
+      <div class="education-block">
+        <h3>Nanyang Polytechnic</h3>
+        <span class="education-date">2024 – Present</span>
+        <h4>Diploma in Information Technology</h4>
+        <p>Cumulative GPA: 3.71. Learning full-stack development, UX design, data analysis, and networking technologies.</p>
+      </div>
+      <div class="education-block">
+        <h3>Ahmad Ibrahim Secondary School</h3>
+        <span class="education-date">2020 – 2023</span>
+        <h4>GCE O-Levels</h4>
+        <p>Track & Field Club Training Leader, SCDF Innovation Challenge Participant.</p>
+      </div>
     </div>
-    <!-- End #experience -->
+  </div>
 
-    <div id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-            </p>
+  <!-- Projects Section -->
+  <div id="projects" class="background-alt">
+    <div class="container">
+      <h2 class="heading">Projects</h2>
+      
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>Nestify – Home Servicing Web App</h3>
+          <p>Full-stack web application for booking home repairs and donating appliances. Eliminates paper receipts by storing digital transactions with secure user authentication and responsive design.</p>
+          <div class="tech-stack">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>AWS Lambda</span>
+          </div>
+          <a href="nestifypage.html" class="project-link" target="_blank">
+            <i class="fas fa-images"></i> View Screenshots
+          </a>
         </div>
-        <!-- End .education-block -->
+      </div>
 
-        <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
-            <ul>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-            </ul>
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>Quantum Vault Bank – Data Visualisation</h3>
+          <p>Interactive Tableau dashboard analyzing customer banking patterns, including income distribution, credit usage, and transaction types. Provides actionable insights for financial planning.</p>
+          <div class="tech-stack">
+            <span>Tableau</span>
+            <span>Data Analysis</span>
+            <span>Data Visualization</span>
+            <span>Financial Analytics</span>
+          </div>
+          <a href="assets/images/qvb-dashboard.png" class="project-link" target="_blank">
+            <i class="fas fa-external-link-alt"></i> View Dashboard
+          </a>
         </div>
-        <!-- End .education-block -->
+      </div>
     </div>
-    <!-- End #education -->
+  </div>
 
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                        </p>
-                        <a href="#">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                        </p>
-                        <a href="#">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-            </div>
-        </div>
-    </div>
-    <!-- End #projects -->
-
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>JavaScript</li>
+  <!-- Skills Section -->
+  <div id="skills">
+    <div class="container">
+      <h2 class="heading">Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <ul>
             <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
             <li>JavaScript</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
+            <li>HTML5/CSS3</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Frameworks & Libraries</h3>
+          <ul>
+            <li>React.js</li>
             <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
-        </ul>
-    </div>
-    <!-- End #skills -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/email@email.com">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+            <li>Express.js</li>
+            <li>Bootstrap</li>
+          </ul>
         </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; <span id="current-year">2022</span> YOUR NAME
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="skill-category">
+          <h3>Databases & Tools</h3>
+          <ul>
+            <li>MongoDB</li>
+            <li>GitHub</li>
+            <li>Tableau</li>
+          </ul>
         </div>
-    </footer>
-    <!-- End footer -->
+        <div class="skill-category">
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Team Collaboration</li>
+            <li>Problem Solving</li>
+            <li>Communication</li>
+            <li>Time Management</li>
+            <li>Adaptability</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+  <div id="contact">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <div id="contact-form">
+        <form method="POST" action="mailto:242981R@mymail.nyp.edu.sg">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="_replyto" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5 copyright">
+          <p>© <span id="current-year">2025</span> Muhammad Hariz bin Abdullah</p>
+        </div>
+        <div class="col-sm-2 top">
+          <span id="to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></span>
+        </div>
+        <div class="col-sm-5 social">
+          <ul>
+            <li><a href="https://github.com/haryiz" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="mailto:242981R@mymail.nyp.edu.sg"><i class="fas fa-envelope"></i></a></li>
+            <li><a href="assets/images/Muhammad_Hariz_Resume1.pdf" download><i class="fas fa-file-pdf"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
-
 </html>
